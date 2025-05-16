@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "admin",
+      "lastName": "admin",
+      "email": "admin@gmail.com",
+      "password": "Admin123@",
+      "phoneNumber": "0789456123",
+      "role": "admin",
+      "university": null,
+      "graduationYear": null,
+      "registrationDate": null
+    },
+    {
+      "id": "1747404187465",
+      "firstName": "Mothana",
+      "lastName": "Almajali",
+      "email": "mothanaalmajali91@gmail.com",
+      "password": "Mothana359157@",
+      "phoneNumber": "0777716328",
+      "university": "Hashemite University",
+      "graduationYear": 2025,
+      "registrationDate": "2025-05-16T14:03:07.465Z",
+      "createdAt": "2025-05-16T14:03:07.465Z"
+    },
+    {
+      "id": 1747420423073,
+      "firstName": "loranse",
+      "lastName": "alkhateeb",
+      "email": "mothanaalmajali911@gmail.com",
+      "password": "Mothana359157@",
+      "phoneNumber": "0777716328",
+      "university": "Hashemite University",
+      "graduationYear": 2025,
+      "registrationDate": "2025-05-16T18:33:43.073Z",
+      "createdAt": "2025-05-16T18:33:43.073Z"
+    },
+    {
+      "id": 1747421232988,
+      "firstName": "Mothana",
+      "lastName": "Almajali",
+      "email": "mothanaalmajali9sss1@gmail.com",
+      "password": "Mothana359157@@",
+      "phoneNumber": "0777716328",
+      "university": "Hashemite University",
+      "graduationYear": 2025,
+      "registrationDate": "2025-05-16T18:47:12.988Z",
+      "createdAt": "2025-05-16T18:47:12.988Z"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "1",
+      "userId": 1,
+      "items": [
+        {
+          "id": 1,
+          "name": "Product 1",
+          "price": 99.99
+        }
+      ]
+    }
+  ]
+}
