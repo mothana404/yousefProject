@@ -11,6 +11,18 @@
       "university": null,
       "graduationYear": null,
       "registrationDate": null
+    },
+    {
+      "id": 1747679879816,
+      "firstName": "Mothana",
+      "lastName": "Almajali",
+      "email": "mothanaalmajali91@gmail.com",
+      "password": "Mothana359157@",
+      "phoneNumber": "0777716328",
+      "university": "Hashemite University",
+      "graduationYear": 2025,
+      "registrationDate": "2025-05-19T18:37:59.816Z",
+      "createdAt": "2025-05-19T18:37:59.816Z"
     }
   ],
   "wishlist": [

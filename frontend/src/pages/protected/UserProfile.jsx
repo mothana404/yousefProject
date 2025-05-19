@@ -14,8 +14,6 @@ import {
   FaLaptopCode,
   FaBriefcase,
 } from 'react-icons/fa';
-import Footer from '../../components/layout/Footer';
-import Navbar from '../../components/layout/Navbar';
 import DashboardLayout from '../../components/layout/DashboardLayout';
 
 const StudentProfile = () => {
@@ -26,13 +24,13 @@ const StudentProfile = () => {
   
     const studentData = {
     personal: {
-      name: "Alex Johnson",
-      major: "Computer Science",
+      name: "Yousef Altarawneh",
+      major: "CIS",
       year: "Junior Year",
-      university: "Stanford University",
-      email: "alex.j@stanford.edu",
-      phone: "+1 (555) 123-4567",
-      location: "Stanford, CA",
+      university: "Hashemite University",
+      email: "sotwareemail123@stanford.edu",
+      phone: "0761591596",
+      location: "Zarqa, Jordan",
       about: "Passionate CS student with a focus on web development and AI. Currently seeking internship opportunities to apply and expand my technical skills in a real-world setting.",
       social: {
         linkedin: "linkedin.com/in/alexj",
@@ -144,7 +142,7 @@ const StudentProfile = () => {
     <DashboardLayout>
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 h-40">
+      <div className="bg-gradient-to-r from-blue-600 to-rose-500 h-40">
         <div className="max-w-6xl mx-auto px-2 relative h-full">
           {/* Profile Card */}
           <motion.div

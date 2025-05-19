@@ -50,8 +50,8 @@ const Dashboard = () => {
   // Mock recommended jobs for job seekers
   const recommendedJobs = [
     { id: 1, title: 'Frontend Developer', company: 'Web Experts', location: 'Remote', salary: '$80k-$110k', match: '95%' },
-    { id: 2, title: 'UX/UI Designer', company: 'Creative Studio', location: 'New York', salary: '$75k-$95k', match: '87%' },
-    { id: 3, title: 'Product Manager', company: 'Tech Innovators', location: 'San Francisco', salary: '$100k-$130k', match: '82%' },
+    { id: 2, title: 'UX/UI Designer', company: 'Creative Studio', location: 'Amman, Jordan', salary: '$75k-$95k', match: '87%' },
+    { id: 3, title: 'Product Manager', company: 'Tech Innovators', location: 'Amman, Jordan', salary: '$100k-$130k', match: '82%' },
   ];
 
   // Mock top candidates for employers
@@ -401,7 +401,7 @@ const Dashboard = () => {
                 </div>
                 <div className="border-l-4 border-green-500 pl-3 py-2">
                   <p className="font-medium">Tech Career Fair</p>
-                  <p className="text-sm text-gray-600">May 23, 10:00 AM • Downtown Convention Center</p>
+                  <p className="text-sm text-gray-600">May 23, 10:00 AM • Amman, 12St</p>
                 </div>
               </div>
             )}

@@ -8,10 +8,9 @@ import {
   FaBuilding,
   FaTrash,
   FaRegClock,
-  FaExternalLinkAlt
+  FaExternalLinkAlt,
+  FaSearch
 } from 'react-icons/fa';
-import Footer from '../../components/layout/Footer';
-import Navbar from '../../components/layout/Navbar';
 import DashboardLayout from '../../components/layout/DashboardLayout';
 
 const SavedJobs = () => {
@@ -28,11 +27,11 @@ const SavedJobs = () => {
       id: 1,
       title: "Frontend Developer Intern",
       company: "Tech Solutions Inc.",
-      location: "New York, NY (Hybrid)",
+      location: "Karak, Jordan",
       type: "Part-time",
       salary: "$25-30/hr",
-      savedDate: "2024-01-15",
-      deadline: "2024-02-28",
+      savedDate: "2025-05-15",
+      deadline: "2025-06-28",
       status: "active",
       description: "Looking for a passionate frontend developer intern to join our team...",
       requirements: ["React", "JavaScript", "HTML/CSS"],
@@ -46,8 +45,8 @@ const SavedJobs = () => {
       location: "Remote",
       type: "Part-time",
       salary: "$22-28/hr",
-      savedDate: "2024-01-10",
-      deadline: "2024-02-20",
+      savedDate: "2025-05-10",
+      deadline: "2025-06-25",
       status: "active",
       description: "Join our data science team as a student assistant...",
       requirements: ["Python", "SQL", "Statistics"],
@@ -58,11 +57,11 @@ const SavedJobs = () => {
       id: 3,
       title: "UI/UX Design Intern",
       company: "Creative Hub",
-      location: "San Francisco, CA",
+      location: "Amman, Jordan",
       type: "Part-time",
       salary: "$20-25/hr",
-      savedDate: "2024-01-05",
-      deadline: "2024-01-30",
+      savedDate: "2025-01-05",
+      deadline: "2025-01-30",
       status: "expired",
       description: "Seeking creative UI/UX design intern for exciting projects...",
       requirements: ["Figma", "Adobe XD", "UI Design"],
@@ -73,11 +72,11 @@ const SavedJobs = () => {
       id: 4,
       title: "Software Engineering Intern",
       company: "Innovation Labs",
-      location: "Boston, MA (On-site)",
+      location: "Zarqa, Jordan",
       type: "Part-time",
       salary: "$28-35/hr",
-      savedDate: "2024-01-12",
-      deadline: "2024-03-15",
+      savedDate: "2025-05-18",
+      deadline: "2025-06-15",
       status: "active",
       description: "Join our engineering team as a software development intern...",
       requirements: ["Java", "Spring Boot", "MySQL"],
@@ -100,7 +99,7 @@ const SavedJobs = () => {
         </div>
 
         {/* Filters and Search */}
-        {/* <div className="bg-white rounded-xl shadow-sm p-4 mb-6">
+        <div className="bg-white rounded-xl shadow-sm p-4 mb-6">
           <div className="grid md:grid-cols-3 gap-4">
             
             <div className="relative">
@@ -136,7 +135,7 @@ const SavedJobs = () => {
               <option value="salary">Sort by Salary</option>
             </select>
           </div>
-        </div> */}
+        </div>
 
         {/* Saved Jobs List */}
         <div className="space-y-4">
