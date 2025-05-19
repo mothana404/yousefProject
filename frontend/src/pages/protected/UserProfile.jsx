@@ -16,6 +16,7 @@ import {
 } from 'react-icons/fa';
 import Footer from '../../components/layout/Footer';
 import Navbar from '../../components/layout/Navbar';
+import DashboardLayout from '../../components/layout/DashboardLayout';
 
 const StudentProfile = () => {
   
@@ -140,11 +141,11 @@ const StudentProfile = () => {
 
   return (
     <>
-    <Navbar/>
+    <DashboardLayout>
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 h-48">
-        <div className="max-w-6xl mx-auto px-4 relative h-full">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 h-40">
+        <div className="max-w-6xl mx-auto px-2 relative h-full">
           {/* Profile Card */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -282,7 +283,7 @@ const StudentProfile = () => {
         </div>
       </div>
     </div>
-    <Footer/>
+    </DashboardLayout>
     </>
   );
 };

@@ -48,58 +48,54 @@ const Login = () => {
 
   // Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!validateForm()) return;
+  e.preventDefault();
 
-    setLoading(true);
-    setError('');
+  if (!validateForm()) return;
 
-    try {
-      const response = await axios.post('YOUR_API_ENDPOINT/login', {
-        email: formData.email,
-        password: formData.password
-      });
+  setLoading(true);
+  setError('');
 
-      if (response.data && response.data.token) {
-        // Store the token
-        Cookies.set('token', response.data.token, {
-          expires: formData.rememberMe ? 30 : 1, // 30 days if remember me is checked
-          secure: true,
-          sameSite: 'strict',
-          path: '/'
-        });
+  try {
+    // Fetch user by email (json-server supports querying like this)
+    const response = await axios.get(`http://localhost:3001/users?email=${formData.email}`);
+    const users = response.data;
 
-        // Store user data if needed
-        if (response.data.user) {
-          localStorage.setItem('user', JSON.stringify(response.data.user));
-        }
-
-        // Redirect to dashboard
-        navigate('/dashboard');
-      }
-    } catch (error) {
-      if (error.response) {
-        switch (error.response.status) {
-          case 400:
-            setError('Invalid email or password');
-            break;
-          case 401:
-            setError('Invalid credentials');
-            break;
-          case 404:
-            setError('Account not found');
-            break;
-          default:
-            setError('An error occurred. Please try again');
-        }
-      } else {
-        setError('Network error. Please check your connection');
-      }
-    } finally {
-      setLoading(false);
+    if (users.length === 0) {
+      setError('Account not found');
+      return;
     }
-  };
+
+    const user = users[0];
+
+    // Compare passwords on the frontend
+    if (user.password !== formData.password) {
+      setError('Invalid email or password');
+      return;
+    }
+
+    // Simulate token generation (json-server doesn't do this)
+    const fakeToken = btoa(`${user.email}:${user.password}`);
+
+    // Set token in cookie
+    Cookies.set('token', fakeToken, {
+      expires: formData.rememberMe ? 30 : 1,
+      secure: true,
+      sameSite: 'strict',
+      path: '/'
+    });
+
+    // Store user in localStorage
+    localStorage.setItem('user', JSON.stringify(user));
+
+    // Navigate to dashboard
+    navigate('/dashboard');
+  } catch (error) {
+    console.error(error);
+    setError('Network error. Please check your connection');
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-blue-50 via-white to-blue-100">
@@ -142,7 +138,7 @@ const Login = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="mt-1 block w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
-                  placeholder="john@example.com"
+                  placeholder="email@example.com"
                 />
               </div>
 

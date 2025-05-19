@@ -104,7 +104,7 @@ const ContactUs = () => {
             <QuickContactCard
               icon={<FaPhone />}
               title="Call Us"
-              content={["+1 (555) 123-4567", "+1 (555) 987-6543"]}
+              content={["0717896541", "0717896541"]}
               highlight="Quick Response Time"
             />
             <QuickContactCard
@@ -147,7 +147,7 @@ const ContactUs = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 pl-10"
-                      placeholder="John Doe"
+                      placeholder="sara omar"
                     />
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <FaUser className="h-4 w-4 text-gray-400" />
@@ -168,7 +168,7 @@ const ContactUs = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 pl-10"
-                      placeholder="john@example.com"
+                      placeholder="sara@example.com"
                     />
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <FaEnvelope className="h-4 w-4 text-gray-400" />

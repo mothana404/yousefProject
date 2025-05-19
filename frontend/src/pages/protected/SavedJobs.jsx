@@ -12,6 +12,7 @@ import {
 } from 'react-icons/fa';
 import Footer from '../../components/layout/Footer';
 import Navbar from '../../components/layout/Navbar';
+import DashboardLayout from '../../components/layout/DashboardLayout';
 
 const SavedJobs = () => {
   const [filter, setFilter] = useState('all');
@@ -87,7 +88,7 @@ const SavedJobs = () => {
 
   return (
     <>
-    <Navbar/>
+    <DashboardLayout>
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header Section */}
@@ -145,7 +146,7 @@ const SavedJobs = () => {
         </div>
       </div>
     </div>
-    <Footer/>
+    </DashboardLayout>
     </>
   );
 };

@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import Logo from '../../assets/PartnestLogo.png';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ const Navbar = () => {
   useEffect(() => {
     const token = Cookies.get("token");
     if (token) {
-      setIsLoggedIn(true);
+    //   setIsLoggedIn(true);
     }
   }, []);
 
@@ -86,7 +87,7 @@ const Navbar = () => {
                 <Link to="/" className="flex items-center">
                   <img
                     className="h-8 w-auto"
-                    src="https://images.vexels.com/media/users/3/142789/isolated/preview/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png"
+                    src={Logo}
                     alt="PartNest"
                   />
                   <span className="ml-2 text-xl font-bold text-blue-600">

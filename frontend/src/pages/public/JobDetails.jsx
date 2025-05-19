@@ -16,6 +16,7 @@ import {
 } from 'react-icons/fa';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
+import { Link } from 'react-router-dom';
 
 const JobDetails = () => {
   const [isBookmarked, setIsBookmarked] = useState(false);
@@ -45,7 +46,7 @@ const JobDetails = () => {
                     Part Time
                   </span>
                   <span className="px-3 py-1 bg-green-50 text-green-600 rounded-full text-sm font-medium">
-                    Remote Option
+                    Karak, Jordan
                   </span>
                 </div>
                 <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
@@ -193,9 +194,11 @@ const JobDetails = () => {
                   value="July 15, 2024"
                 />
               </div>
-              <button className="w-full mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200">
+              <Link to={'/signin'} >
+                  <button className="w-full mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200">
                 Apply Now
               </button>
+              </Link>
             </div>
 
             {/* Continue with Company Info Card... */}

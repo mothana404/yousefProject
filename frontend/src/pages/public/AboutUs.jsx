@@ -99,14 +99,14 @@ const AboutUs = () => {
                 Partner Universities
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <UniversityCard name="MIT" students="500+" programs="15+" />
+                <UniversityCard name="University of Science and Technology" students="500+" programs="15+" />
                 <UniversityCard
-                  name="Stanford"
+                  name="The Hashemite University"
                   students="450+"
                   programs="12+"
                 />
-                <UniversityCard name="Harvard" students="400+" programs="10+" />
-                <UniversityCard name="Berkeley" students="350+" programs="8+" />
+                <UniversityCard name="Yarmouk University" students="400+" programs="10+" />
+                <UniversityCard name="University of Jordan" students="350+" programs="8+" />
               </div>
             </div>
 
@@ -114,7 +114,7 @@ const AboutUs = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <MetricCard
                 number="5,000+"
-                label="Students Placed"
+                label="University of Jordan"
                 growth="+45% from last year"
               />
               <MetricCard

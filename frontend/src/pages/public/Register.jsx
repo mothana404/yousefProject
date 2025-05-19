@@ -74,8 +74,10 @@ const Register = () => {
       setError("Please enter a valid email address");
       return false;
     }
-    if (!formData.phoneNumber.match(/^\+?[\d\s-]{10,}$/)) {
-      setError("Please enter a valid phone number");
+    if (!formData.phoneNumber.match(/^07[7-9]\d{7}$/)) {
+      setError(
+        "Please enter a valid Jordanian phone number (e.g., 0791234567)"
+      );
       return false;
     }
     return true;
@@ -168,14 +170,14 @@ const Register = () => {
       email: formData.email.trim().toLowerCase(),
       password: formData.password,
       phoneNumber: formData.phoneNumber.replace(/\s+/g, ""),
-      role: formData.role,
+      role: "student",
       university: formData.university.trim(),
       graduationYear: parseInt(formData.graduationYear),
       registrationDate: new Date().toISOString(),
     };
   };
   // Form Submission Handler
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (step !== 3) return;
@@ -200,7 +202,7 @@ const handleSubmit = async (e) => {
         ...prepareFormData(),
         id: Date.now(),
         role: formData.userType,
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
       };
 
       const response = await axios.post(
@@ -214,8 +216,8 @@ const handleSubmit = async (e) => {
       );
 
       if (response.data) {
-        const token = btoa(response.data.email + ':' + Date.now());
-        
+        const token = btoa(response.data.email + ":" + Date.now());
+
         Cookies.set("token", token, {
           expires: 7,
           secure: true,
@@ -225,11 +227,11 @@ const handleSubmit = async (e) => {
 
         const userToStore = {
           id: response.data.id,
-          name: response.data.name,
+          name: `${response.data.firstName} ${response.data.lastName}`,
           email: response.data.email,
-          role: response.data.role,
+          role: "student",
         };
-        
+
         localStorage.setItem("user", JSON.stringify(userToStore));
         navigate("/dashboard");
       }
@@ -309,7 +311,7 @@ const handleSubmit = async (e) => {
                         value={formData.firstName}
                         onChange={handleChange}
                         className="mt-1 block w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="John"
+                        placeholder="Ali"
                       />
                     </div>
                     <div>
@@ -322,7 +324,7 @@ const handleSubmit = async (e) => {
                         value={formData.lastName}
                         onChange={handleChange}
                         className="mt-1 block w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Doe"
+                        placeholder="Yousef"
                       />
                     </div>
                   </div>
@@ -338,7 +340,7 @@ const handleSubmit = async (e) => {
                       value={formData.email}
                       onChange={handleChange}
                       className="mt-1 block w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="john@example.com"
+                      placeholder="email123@example.com"
                     />
                   </div>
 
@@ -353,7 +355,7 @@ const handleSubmit = async (e) => {
                       value={formData.phoneNumber}
                       onChange={handleChange}
                       className="mt-1 block w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="07********"
                     />
                   </div>
 

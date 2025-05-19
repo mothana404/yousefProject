@@ -28,8 +28,6 @@ const PlatformBenefits = () => {
       benefits: [
         "One-click applications",
         "Smart profile auto-fill",
-        "Document management",
-        "Application tracking"
       ]
     },
     {
@@ -40,7 +38,6 @@ const PlatformBenefits = () => {
       stats: "85% success rate",
       benefits: [
         "Academic project showcase",
-        "Skill assessment tools",
         "Interview preparation",
         "Career guidance"
       ]
